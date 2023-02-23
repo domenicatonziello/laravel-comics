@@ -39,14 +39,25 @@
             <div class="container">
                 @foreach($comics as $comic)
                     <figure>
-                        <img :src="$comic['thumb']" :alt="$comic['type']">
+                        <img src="{{ $comic['thumb'] }}" alt="{{ $comic['type'] }}">
                         <figcaption> {{ $comic['series'] }} </figcaption>
                     </figure>
                 @endforeach
             </div>
         </section>
         <!-- main bottom -->
-        {{-- <app-banner></app-banner> --}}
+        <section id="banner">
+            <ul class="container">
+                @foreach($banners as $banner)
+                    <li>
+                        <img src="{{Vite:: asset('resources/images/'.$banner['image'])}}" alt="buy-comics-digital">
+                        <p>{{$banner['text']}}</p>
+                    </li>
+                @endforeach
+            </ul>
+        </section>
     </main>
+    <!--Footer -->
+    
 </body>
 </html>
