@@ -13,15 +13,6 @@
 
     position: relative;
 
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 30px 0;
-
-    }
-
     .title {
         display: inline-block;
         background-color: dodgerblue;
@@ -30,25 +21,51 @@
         padding: 10px;
         font-weight: bold;
         position: relative;
-        top: 0;
+        top: -20px;
         left: 180px;
     }
 
-    figure {
-        width: 150px;
-        height: 150px;
-        margin-bottom: 50px;
-        padding: 5px;
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px 0;
 
-        img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
+        .card {
+            flex-basis: calc(100% / 6);
+            padding: 20px 5px;
 
-        figcaption {
-            text-transform: uppercase;
-            font-size: 13px;
+            figure {
+                height: 150px;
+                width: 150px;
+                margin-bottom: 10px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+
+                }
+            }
         }
     }
+
+
+    // figure {
+    //     width: 150px;
+    //     height: 150px;
+    //     // margin-bottom: 50px;
+    //     padding: 5px;
+
+    //     img {
+    //         height: 100%;
+    //         width: 100%;
+    //         object-fit: cover;
+    //         margin-bottom: 10px;
+    //     }
+
+    //     figcaption {
+    //         text-transform: uppercase;
+    //         font-size: 13px;
+    //     }
+    // }
 }
