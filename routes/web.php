@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $pages = ['Characters', 'Comics', 'Movie', 'TV', 'Games', 'Collectibles', 'Videos', 'Fans', 'News', 'Shop'];
-    return view('home', compact('pages'));
+    $comics = config('comics');
+    return view('home', compact('pages', 'comics'));
 })->name('home');

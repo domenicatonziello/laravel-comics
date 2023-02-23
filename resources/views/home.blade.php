@@ -29,5 +29,24 @@
             </div>
         </div>
     </header>
+    <!-- Main -->
+    <main>
+        <!-- Jumbotron -->
+        <div class="jumbo"></div>
+        <!-- main-top -->
+        <section class="main-top">
+            <div class="title"> Current Series </div>
+            <div class="container">
+                @foreach($comics as $comic)
+                    <figure>
+                        <img :src="$comic['thumb']" :alt="$comic['type']">
+                        <figcaption> {{ $comic['series'] }} </figcaption>
+                    </figure>
+                @endforeach
+            </div>
+        </section>
+        <!-- main bottom -->
+        {{-- <app-banner></app-banner> --}}
+    </main>
 </body>
 </html>
